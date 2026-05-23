@@ -1,0 +1,276 @@
+aid: clear-channel-outdoor
+url: https://raw.githubusercontent.com/api-evangelist/clear-channel-outdoor/refs/heads/main/apis.yml
+name: Clear Channel Outdoor
+type: Index
+access: 3rd-Party
+position: Consumer
+specificationVersion: '0.19'
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+kind: company
+tags:
+  - Advertising
+  - Out Of Home
+  - OOH
+  - Programmatic
+  - Digital Out Of Home
+  - DOOH
+  - pDOOH
+  - OpenRTB
+  - OpenDirect
+  - Billboards
+  - Transit Advertising
+  - Airport Advertising
+  - Audience Measurement
+  - Location Data
+description: >-
+  Clear Channel Outdoor (NYSE: CCO) is one of the largest out-of-home (OOH)
+  advertising companies in the world, operating billboards, street furniture,
+  transit, airport, and digital out-of-home (DOOH) displays across 65+ U.S.
+  markets and 55+ commercial airports, reaching "130 million Americans
+  weekly." The CCO developer surface spans three layers: the CCO.IO
+  Automated Direct REST API at direct.cco.io for programmatic-direct buying
+  of inventory (OAuth 2.0 client credentials, open-source Go SDK at
+  github.com/ClearChannelOutdoor/io-sdk-golang), programmatic digital
+  out-of-home (pDOOH) buying through 20+ DSP partners using OpenRTB 2.6
+  with the DOOH object extension, and RADAR — CCO's first-party audience
+  and attribution data suite (RADARView, RADARProof, RADARConnect,
+  RADARSync, Inflight Insights) built on aggregated and anonymous mobile
+  location data. CCO maintains a public fork of the IAB Tech Lab
+  OpenDirect-OOH specification at github.com/ClearChannelOutdoor/ooh_open_direct.
+created: '2026-05-22'
+modified: '2026-05-23'
+apis:
+  - aid: clear-channel-outdoor:clear-channel-outdoor-direct
+    name: Clear Channel Outdoor Automated Direct API
+    description: >-
+      REST API for the CCO.IO Automated Direct platform at direct.cco.io.
+      Supports search, retrieval and management of displays, networks,
+      markets, products, orders, bookings, campaigns, creatives, photos,
+      customers, accounts, contracts, quotes, renewals, restrictions and
+      IAB / OpenOOH taxonomies. Uses OAuth 2.0 client credentials
+      (tokenUrl https://direct.cco.io/v2/token) with scoped access tokens.
+      The OpenAPI documented here is derived from the open-source Go SDK
+      at github.com/ClearChannelOutdoor/io-sdk-golang and from the
+      developer portal at developer.cco.io.
+    humanURL: https://developer.cco.io
+    baseURL: https://direct.cco.io
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    tags:
+      - Programmatic Direct
+      - DOOH
+      - OOH
+      - REST
+      - OAuth2
+    properties:
+      - type: Documentation
+        url: https://developer.cco.io
+      - type: OpenAPI
+        url: openapi/clear-channel-outdoor-direct-openapi.yml
+      - type: SDK
+        url: https://github.com/ClearChannelOutdoor/io-sdk-golang
+      - type: Authentication
+        url: https://direct.cco.io/v2/token
+      - type: Spectral
+        url: rules/clear-channel-outdoor-direct-rules.yml
+      - type: Naftiko Capabilities
+        url: capabilities/programmatic-direct-ooh-buying.yaml
+  - aid: clear-channel-outdoor:pdooh-rtb-supply
+    name: Clear Channel Outdoor pDOOH RTB Supply
+    description: >-
+      Programmatic digital out-of-home (pDOOH) supply made available
+      through 20+ DSP partners that transact CCO inventory via OpenRTB
+      2.6 with the DOOH object extension (with imp.qty support and the
+      OpenOOH venue taxonomy where venuetypetax=1). This is not a CCO-
+      hosted REST API — it is a supply-chain contract that buyers access
+      through DSPs/SSPs (Vistar Media, Hivestack, The Trade Desk,
+      Google DV360, etc.). Documented here so the contract, partners and
+      schemas are first-class artifacts in the network.
+    humanURL: https://clearchanneloutdoor.com/programmatic-advertising/
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    tags:
+      - pDOOH
+      - OpenRTB
+      - DSP
+      - SSP
+      - RTB
+    properties:
+      - type: Documentation
+        url: https://clearchanneloutdoor.com/programmatic-advertising/
+      - type: Standards
+        url: https://github.com/InteractiveAdvertisingBureau/openrtb2.x
+      - type: JSONSchema
+        url: json-schema/clear-channel-outdoor-openrtb-dooh-schema.json
+      - type: JSONSchema
+        url: json-schema/clear-channel-outdoor-dsp-integration-schema.json
+      - type: Examples
+        url: examples/clear-channel-outdoor-openrtb-dooh-bid-request-example.json
+      - type: Naftiko Capabilities
+        url: capabilities/pdooh-rtb-supply.yaml
+  - aid: clear-channel-outdoor:radar
+    name: Clear Channel Outdoor RADAR Data Suite
+    description: >-
+      RADAR is CCO's first-party audience-planning, attribution and
+      measurement suite built on aggregated and/or anonymous mobile
+      location data licensed from business partners. The suite includes
+      RADARView (planning), RADARProof (attribution), RADARConnect
+      (audience activation), RADARSync (data sync), and Inflight
+      Insights — described as "the first in-house measurement solution
+      offered by an OOH media owner to deliver visitation analytics
+      during a campaign flight." RADAR is delivered as a managed
+      data/services offering; there is no public self-serve API.
+      Documented here so the product family, scope and data semantics
+      are catalogued in the network.
+    humanURL: https://clearchanneloutdoor.com/radar-data-solutions/
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    tags:
+      - Audience Data
+      - Attribution
+      - Location Data
+      - Measurement
+      - Planning
+    properties:
+      - type: Documentation
+        url: https://clearchanneloutdoor.com/radar-data-solutions/
+      - type: Privacy
+        url: https://clearchanneloutdoor.com/privacy-policy/
+common:
+  - type: Website
+    url: https://clearchanneloutdoor.com
+  - type: DeveloperPortal
+    url: https://developer.cco.io
+  - type: Portal
+    url: https://developer.cco.io
+  - type: ProgrammaticAdvertising
+    url: https://clearchanneloutdoor.com/programmatic-advertising/
+  - type: DataSolutions
+    url: https://clearchanneloutdoor.com/radar-data-solutions/
+  - type: GitHub
+    url: https://github.com/ClearChannelOutdoor
+  - type: GitHubOrganization
+    url: https://github.com/ClearChannelOutdoor
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/clear-channel-outdoor
+  - type: InvestorRelations
+    url: https://investor.clearchannel.com
+  - type: PrivacyPolicy
+    url: https://clearchanneloutdoor.com/privacy-policy/
+  - type: JSONLD
+    url: json-ld/clear-channel-outdoor-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/clear-channel-outdoor-vocabulary.yml
+  - type: Plans
+    url: plans/clear-channel-outdoor-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/clear-channel-outdoor-rate-limits.yml
+  - type: FinOps
+    url: finops/clear-channel-outdoor-finops.yml
+  - type: SDK
+    url: https://github.com/ClearChannelOutdoor/io-sdk-golang
+    data:
+      - name: io-sdk-golang
+        language: Go
+        license: MIT
+        url: https://github.com/ClearChannelOutdoor/io-sdk-golang
+        description: Go SDK for the CCO.IO Automated Direct and Programmatic endpoints (`https://direct.cco.io`). Provides clients for displays and other resources with OAuth 2.0 client credentials auth.
+      - name: cco-blueprint-ui
+        language: TypeScript
+        url: https://github.com/ClearChannelOutdoor/cco-blueprint-ui
+        description: MUI-based React component library — theme, Header, AppShell, LoginModal — for CCO internal applications.
+      - name: token-middleware
+        language: Go
+        license: MIT
+        url: https://github.com/ClearChannelOutdoor/token-middleware
+        description: Token-handling middleware for CCO Go services.
+      - name: external-ids
+        language: Go
+        license: MIT
+        url: https://github.com/ClearChannelOutdoor/external-ids
+        description: Library for managing and formatting external IDs.
+      - name: pubsub-go
+        language: Go
+        license: MIT
+        url: https://github.com/ClearChannelOutdoor/pubsub-go
+        description: Google Cloud Platform Pub/Sub Go library.
+      - name: memorystore-go
+        language: Go
+        license: MIT
+        url: https://github.com/ClearChannelOutdoor/memorystore-go
+        description: Module for connecting to Google Cloud Memorystore.
+      - name: gin-zerologger
+        language: Go
+        license: MIT
+        url: https://github.com/ClearChannelOutdoor/gin-zerologger
+        description: Gin middleware component for logging requests with rs/zerolog.
+  - type: Standards
+    url: https://github.com/ClearChannelOutdoor/ooh_open_direct
+    data:
+      - name: OpenRTB 2.6 (DOOH)
+        url: https://github.com/InteractiveAdvertisingBureau/openrtb2.x
+        description: IAB Tech Lab real-time-bidding protocol; v2.6 adds the DOOH object and imp.qty for programmatic DOOH supply.
+      - name: OpenDirect-OOH
+        url: https://github.com/Outsmart-OOH/ooh_open_direct
+        description: IAB Tech Lab community extension of OpenDirect for the OOH media industry. CCO maintains a fork at github.com/ClearChannelOutdoor/ooh_open_direct.
+      - name: OpenOOH Venue Taxonomy
+        description: Standardized venue-type taxonomy referenced by OpenRTB `venuetypetax=1` for DOOH bid requests.
+  - type: Products
+    url: https://clearchanneloutdoor.com
+    data:
+      - name: Billboards
+        description: Bulletins, posters and digital billboards across 65+ U.S. markets.
+      - name: Airport Advertising
+        description: Displays in 55+ commercial airports nationwide.
+      - name: Transit Shelter Advertising
+        description: Street furniture and transit shelter advertising.
+      - name: Digital Out of Home (DOOH)
+        description: Digital screens supporting dynamic content (weather, time of day, traffic triggers) and creative formats including 2D extensions, 3D props, 3D anamorphic images, and AR.
+      - name: RADAR Data Suite
+        description: RADARView, RADARProof, RADARConnect, RADARSync, and Inflight Insights — planning, attribution and measurement built on aggregated mobile location data.
+  - type: Integrations
+    url: https://clearchanneloutdoor.com/programmatic-advertising/
+    data:
+      - name: Adelphic
+        description: pDOOH buying via Adelphic DSP integration.
+      - name: Adform
+        description: pDOOH buying via Adform DSP integration.
+      - name: Adomni
+        description: pDOOH buying via Adomni DSP integration.
+      - name: AdQuick
+        description: pDOOH buying via AdQuick DSP integration.
+      - name: Campsite
+        description: pDOOH buying via Campsite DSP integration.
+      - name: Displayce
+        description: pDOOH buying via Displayce DSP integration.
+      - name: Google DV360
+        description: pDOOH buying via Google Display & Video 360 DSP integration.
+      - name: Hivestack
+        description: pDOOH buying via Hivestack DSP/SSP integration.
+      - name: Nexxen
+        description: pDOOH buying via Nexxen DSP integration.
+      - name: OneView
+        description: pDOOH buying via OneView (Roku) DSP integration.
+      - name: OutMoove
+        description: pDOOH buying via OutMoove DSP integration.
+      - name: Pulsepoint
+        description: pDOOH buying via Pulsepoint DSP integration.
+      - name: Quotient
+        description: pDOOH buying via Quotient DSP integration.
+      - name: Simplifi
+        description: pDOOH buying via Simplifi DSP integration.
+      - name: Sito
+        description: pDOOH buying via Sito DSP integration.
+      - name: StackAdapt
+        description: pDOOH buying via StackAdapt DSP integration.
+      - name: The Trade Desk
+        description: pDOOH buying via The Trade Desk DSP integration.
+      - name: Vistar Media
+        description: pDOOH buying via Vistar Media DSP/SSP integration.
+      - name: Xandr
+        description: pDOOH buying via Xandr DSP integration.
+      - name: Yahoo
+        description: pDOOH buying via Yahoo DSP integration.
+      - name: Zeta
+        description: pDOOH buying via Zeta DSP integration.
+maintainers:
+  - FN: Kin Lane
+    url: https://apievangelist.com
+    email: kin@apievangelist.com
