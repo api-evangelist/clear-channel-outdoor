@@ -23,19 +23,14 @@ tags:
   - Audience Measurement
   - Location Data
 description: >-
-  Clear Channel Outdoor (NYSE: CCO) is one of the largest out-of-home (OOH)
-  advertising companies in the world, operating billboards, street furniture,
-  transit, airport, and digital out-of-home (DOOH) displays across 65+ U.S.
-  markets and 55+ commercial airports, reaching "130 million Americans
-  weekly." The CCO developer surface spans three layers: the CCO.IO
-  Automated Direct REST API at direct.cco.io for programmatic-direct buying
-  of inventory (OAuth 2.0 client credentials, open-source Go SDK at
-  github.com/ClearChannelOutdoor/io-sdk-golang), programmatic digital
-  out-of-home (pDOOH) buying through 20+ DSP partners using OpenRTB 2.6
-  with the DOOH object extension, and RADAR — CCO's first-party audience
-  and attribution data suite (RADARView, RADARProof, RADARConnect,
-  RADARSync, Inflight Insights) built on aggregated and anonymous mobile
-  location data. CCO maintains a public fork of the IAB Tech Lab
+  Clear Channel Outdoor (NYSE: CCO) is one of the largest out-of-home (OOH) advertising companies in the world,
+  operating billboards, street furniture, transit, airport, and digital out-of-home (DOOH) displays across 65+ U.S.
+  markets and 55+ commercial airports, reaching "130 million Americans weekly." The CCO developer surface spans three
+  layers: the CCO.IO Automated Direct REST API at direct.cco.io for programmatic-direct buying of inventory (OAuth 2.0
+  client credentials, open-source Go SDK at github.com/ClearChannelOutdoor/io-sdk-golang), programmatic digital
+  out-of-home (pDOOH) buying through 20+ DSP partners using OpenRTB 2.6 with the DOOH object extension, and RADAR —
+  CCO's first-party audience and attribution data suite (RADARView, RADARProof, RADARConnect, RADARSync, Inflight
+  Insights) built on aggregated and anonymous mobile location data. CCO maintains a public fork of the IAB Tech Lab
   OpenDirect-OOH specification at github.com/ClearChannelOutdoor/ooh_open_direct.
 created: '2026-05-22'
 modified: '2026-05-23'
@@ -43,15 +38,12 @@ apis:
   - aid: clear-channel-outdoor:clear-channel-outdoor-direct
     name: Clear Channel Outdoor Automated Direct API
     description: >-
-      REST API for the CCO.IO Automated Direct platform at direct.cco.io.
-      Supports search, retrieval and management of displays, networks,
-      markets, products, orders, bookings, campaigns, creatives, photos,
-      customers, accounts, contracts, quotes, renewals, restrictions and
-      IAB / OpenOOH taxonomies. Uses OAuth 2.0 client credentials
-      (tokenUrl https://direct.cco.io/v2/token) with scoped access tokens.
-      The OpenAPI documented here is derived from the open-source Go SDK
-      at github.com/ClearChannelOutdoor/io-sdk-golang and from the
-      developer portal at developer.cco.io.
+      REST API for the CCO.IO Automated Direct platform at direct.cco.io. Supports search, retrieval and management of
+      displays, networks, markets, products, orders, bookings, campaigns, creatives, photos, customers, accounts,
+      contracts, quotes, renewals, restrictions and IAB / OpenOOH taxonomies. Uses OAuth 2.0 client credentials
+      (tokenUrl https://direct.cco.io/v2/token) with scoped access tokens. The OpenAPI documented here is derived from
+      the open-source Go SDK at github.com/ClearChannelOutdoor/io-sdk-golang and from the developer portal at
+      developer.cco.io.
     humanURL: https://developer.cco.io
     baseURL: https://direct.cco.io
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -72,19 +64,14 @@ apis:
         url: https://direct.cco.io/v2/token
       - type: Spectral
         url: rules/clear-channel-outdoor-direct-rules.yml
-      - type: Naftiko Capabilities
-        url: capabilities/programmatic-direct-ooh-buying.yaml
   - aid: clear-channel-outdoor:pdooh-rtb-supply
     name: Clear Channel Outdoor pDOOH RTB Supply
     description: >-
-      Programmatic digital out-of-home (pDOOH) supply made available
-      through 20+ DSP partners that transact CCO inventory via OpenRTB
-      2.6 with the DOOH object extension (with imp.qty support and the
-      OpenOOH venue taxonomy where venuetypetax=1). This is not a CCO-
-      hosted REST API — it is a supply-chain contract that buyers access
-      through DSPs/SSPs (Vistar Media, Hivestack, The Trade Desk,
-      Google DV360, etc.). Documented here so the contract, partners and
-      schemas are first-class artifacts in the network.
+      Programmatic digital out-of-home (pDOOH) supply made available through 20+ DSP partners that transact CCO
+      inventory via OpenRTB 2.6 with the DOOH object extension (with imp.qty support and the OpenOOH venue taxonomy
+      where venuetypetax=1). This is not a CCO- hosted REST API — it is a supply-chain contract that buyers access
+      through DSPs/SSPs (Vistar Media, Hivestack, The Trade Desk, Google DV360, etc.). Documented here so the contract,
+      partners and schemas are first-class artifacts in the network.
     humanURL: https://clearchanneloutdoor.com/programmatic-advertising/
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     tags:
@@ -104,22 +91,15 @@ apis:
         url: json-schema/clear-channel-outdoor-dsp-integration-schema.json
       - type: Examples
         url: examples/clear-channel-outdoor-openrtb-dooh-bid-request-example.json
-      - type: Naftiko Capabilities
-        url: capabilities/pdooh-rtb-supply.yaml
   - aid: clear-channel-outdoor:radar
     name: Clear Channel Outdoor RADAR Data Suite
     description: >-
-      RADAR is CCO's first-party audience-planning, attribution and
-      measurement suite built on aggregated and/or anonymous mobile
-      location data licensed from business partners. The suite includes
-      RADARView (planning), RADARProof (attribution), RADARConnect
-      (audience activation), RADARSync (data sync), and Inflight
-      Insights — described as "the first in-house measurement solution
-      offered by an OOH media owner to deliver visitation analytics
-      during a campaign flight." RADAR is delivered as a managed
-      data/services offering; there is no public self-serve API.
-      Documented here so the product family, scope and data semantics
-      are catalogued in the network.
+      RADAR is CCO's first-party audience-planning, attribution and measurement suite built on aggregated and/or
+      anonymous mobile location data licensed from business partners. The suite includes RADARView (planning),
+      RADARProof (attribution), RADARConnect (audience activation), RADARSync (data sync), and Inflight Insights —
+      described as "the first in-house measurement solution offered by an OOH media owner to deliver visitation
+      analytics during a campaign flight." RADAR is delivered as a managed data/services offering; there is no public
+      self-serve API. Documented here so the product family, scope and data semantics are catalogued in the network.
     humanURL: https://clearchanneloutdoor.com/radar-data-solutions/
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     tags:
@@ -171,7 +151,9 @@ common:
         language: Go
         license: MIT
         url: https://github.com/ClearChannelOutdoor/io-sdk-golang
-        description: Go SDK for the CCO.IO Automated Direct and Programmatic endpoints (`https://direct.cco.io`). Provides clients for displays and other resources with OAuth 2.0 client credentials auth.
+        description: >-
+          Go SDK for the CCO.IO Automated Direct and Programmatic endpoints (`https://direct.cco.io`). Provides clients
+          for displays and other resources with OAuth 2.0 client credentials auth.
       - name: cco-blueprint-ui
         language: TypeScript
         url: https://github.com/ClearChannelOutdoor/cco-blueprint-ui
@@ -209,7 +191,9 @@ common:
         description: IAB Tech Lab real-time-bidding protocol; v2.6 adds the DOOH object and imp.qty for programmatic DOOH supply.
       - name: OpenDirect-OOH
         url: https://github.com/Outsmart-OOH/ooh_open_direct
-        description: IAB Tech Lab community extension of OpenDirect for the OOH media industry. CCO maintains a fork at github.com/ClearChannelOutdoor/ooh_open_direct.
+        description: >-
+          IAB Tech Lab community extension of OpenDirect for the OOH media industry. CCO maintains a fork at
+          github.com/ClearChannelOutdoor/ooh_open_direct.
       - name: OpenOOH Venue Taxonomy
         description: Standardized venue-type taxonomy referenced by OpenRTB `venuetypetax=1` for DOOH bid requests.
   - type: Products
@@ -222,9 +206,13 @@ common:
       - name: Transit Shelter Advertising
         description: Street furniture and transit shelter advertising.
       - name: Digital Out of Home (DOOH)
-        description: Digital screens supporting dynamic content (weather, time of day, traffic triggers) and creative formats including 2D extensions, 3D props, 3D anamorphic images, and AR.
+        description: >-
+          Digital screens supporting dynamic content (weather, time of day, traffic triggers) and creative formats
+          including 2D extensions, 3D props, 3D anamorphic images, and AR.
       - name: RADAR Data Suite
-        description: RADARView, RADARProof, RADARConnect, RADARSync, and Inflight Insights — planning, attribution and measurement built on aggregated mobile location data.
+        description: >-
+          RADARView, RADARProof, RADARConnect, RADARSync, and Inflight Insights — planning, attribution and measurement
+          built on aggregated mobile location data.
   - type: Integrations
     url: https://clearchanneloutdoor.com/programmatic-advertising/
     data:

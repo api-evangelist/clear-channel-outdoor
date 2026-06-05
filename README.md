@@ -1,71 +1,127 @@
-# clear-channel-outdoor
+# Clear Channel Outdoor (clear-channel-outdoor)
 
-API Evangelist network profile for **Clear Channel Outdoor** (NYSE: CCO) — one of the largest out-of-home (OOH) advertising companies in the world, operating billboards, street furniture, transit, airport, and digital out-of-home (DOOH) displays across 65+ U.S. markets and 55+ commercial airports.
+Clear Channel Outdoor (NYSE: CCO) is one of the largest out-of-home (OOH) advertising companies in the world, operating billboards, street furniture, transit, airport, and digital out-of-home (DOOH) displays across 65+ U.S. markets and 55+ commercial airports, reaching "130 million Americans weekly." The CCO developer surface spans three layers: the CCO.IO Automated Direct REST API at direct.cco.io for programmatic-direct buying of inventory (OAuth 2.0 client credentials, open-source Go SDK at github.com/ClearChannelOutdoor/io-sdk-golang), programmatic digital out-of-home (pDOOH) buying through 20+ DSP partners using OpenRTB 2.6 with the DOOH object extension, and RADAR — CCO's first-party audience and attribution data suite (RADARView, RADARProof, RADARConnect, RADARSync, Inflight Insights) built on aggregated and anonymous mobile location data. CCO maintains a public fork of the IAB Tech Lab OpenDirect-OOH specification at github.com/ClearChannelOutdoor/ooh_open_direct.
 
-This profile catalogs CCO's three-layer developer / programmatic surface:
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/clear-channel-outdoor/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/clear-channel-outdoor/refs/heads/main/apis.yml)
 
-1. The **CCO.IO Automated Direct API** at `direct.cco.io` (developer portal at `developer.cco.io`) — programmatic-direct buying of CCO inventory, OAuth 2.0 client credentials, with an open-source Go SDK at [`ClearChannelOutdoor/io-sdk-golang`](https://github.com/ClearChannelOutdoor/io-sdk-golang).
-2. The **pDOOH RTB supply chain** — 20+ DSP partners that transact CCO inventory using OpenRTB 2.6 with the DOOH object extension and the OpenOOH venue taxonomy (`venuetypetax=1`).
-3. **RADAR** — CCO's first-party audience-planning, attribution, and measurement suite built on aggregated and anonymous mobile location data.
+## Scope
 
-## Artifacts
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
-| Artifact | Path |
-|---|---|
-| `apis.yml` | [`apis.yml`](apis.yml) |
-| OpenAPI — Automated Direct | [`openapi/clear-channel-outdoor-direct-openapi.yml`](openapi/clear-channel-outdoor-direct-openapi.yml) |
-| JSON Schema — DOOH Display | [`json-schema/clear-channel-outdoor-display-schema.json`](json-schema/clear-channel-outdoor-display-schema.json) |
-| JSON Schema — DSP Integration | [`json-schema/clear-channel-outdoor-dsp-integration-schema.json`](json-schema/clear-channel-outdoor-dsp-integration-schema.json) |
-| JSON Schema — OOH Order (OpenDirect) | [`json-schema/clear-channel-outdoor-order-schema.json`](json-schema/clear-channel-outdoor-order-schema.json) |
-| JSON Schema — OpenRTB DOOH | [`json-schema/clear-channel-outdoor-openrtb-dooh-schema.json`](json-schema/clear-channel-outdoor-openrtb-dooh-schema.json) |
-| JSON Structure — pDOOH supply chain | [`json-structure/clear-channel-outdoor-pdooh-supply-chain-structure.json`](json-structure/clear-channel-outdoor-pdooh-supply-chain-structure.json) |
-| JSON-LD context | [`json-ld/clear-channel-outdoor-context.jsonld`](json-ld/clear-channel-outdoor-context.jsonld) |
-| Examples | [`examples/`](examples/) |
-| Spectral rules | [`rules/clear-channel-outdoor-direct-rules.yml`](rules/clear-channel-outdoor-direct-rules.yml) |
-| Naftiko capability — programmatic-direct buying | [`capabilities/programmatic-direct-ooh-buying.yaml`](capabilities/programmatic-direct-ooh-buying.yaml) |
-| Naftiko capability — pDOOH RTB supply | [`capabilities/pdooh-rtb-supply.yaml`](capabilities/pdooh-rtb-supply.yaml) |
-| Vocabulary | [`vocabulary/clear-channel-outdoor-vocabulary.yml`](vocabulary/clear-channel-outdoor-vocabulary.yml) |
-| Plans (pricing) | [`plans/clear-channel-outdoor-plans-pricing.yml`](plans/clear-channel-outdoor-plans-pricing.yml) |
-| Rate limits | [`rate-limits/clear-channel-outdoor-rate-limits.yml`](rate-limits/clear-channel-outdoor-rate-limits.yml) |
-| FinOps | [`finops/clear-channel-outdoor-finops.yml`](finops/clear-channel-outdoor-finops.yml) |
+## Tags
 
-## CCO.IO Automated Direct API
+- Advertising
+- Out Of Home
+- OOH
+- Programmatic
+- Digital Out Of Home
+- DOOH
+- pDOOH
+- OpenRTB
+- OpenDirect
+- Billboards
+- Transit Advertising
+- Airport Advertising
+- Audience Measurement
+- Location Data
 
-REST API for buying CCO inventory programmatically. Authentication is OAuth 2.0 client credentials at `https://direct.cco.io/v2/token`. Path families surfaced in the OpenAPI:
+## Timestamps
 
-`/v1/displays`, `/v1/networks`, `/v1/networks/{id}/displays`, `/v1/markets`, `/v1/products`, `/v1/orders`, `/v1/bookings`, `/v1/campaigns`, `/v1/creatives`, `/v2/creatives`, `/v1/photos`, `/v1/customers`, `/v1/accounts`, `/v1/contracts`, `/v1/quotes`, `/v1/quotes/current`, `/v1/relationships`, `/v1/restrictions`, `/v1/codes`, `/v1/taxa`, `/v2/taxa`, `/v3/taxa`.
+- **Created:** 2026-05-22
+- **Modified:** 2026-05-23
 
-These were derived from the open-source Go SDK [`ClearChannelOutdoor/io-sdk-golang`](https://github.com/ClearChannelOutdoor/io-sdk-golang) and the developer portal at [developer.cco.io](https://developer.cco.io).
+## APIs
 
-## pDOOH DSP Partners
+### Clear Channel Outdoor Automated Direct API
 
-CCO supports programmatic DOOH buying through 20+ DSP partners using OpenRTB 2.6 with the DOOH object: Adelphic, Adform, Adomni, AdQuick, Campsite, Displayce, Google DV360, Hivestack, Nexxen, OneView, OutMoove, Pulsepoint, Quotient, Simplifi, Sito, StackAdapt, The Trade Desk, Vistar Media, Xandr, Yahoo, and Zeta.
+REST API for the CCO.IO Automated Direct platform at direct.cco.io. Supports search, retrieval and management of displays, networks, markets, products, orders, bookings, campaigns, creatives, photos, customers, accounts, contracts, quotes, renewals, restrictions and IAB / OpenOOH taxonomies. Uses OAuth 2.0 client credentials (tokenUrl https://direct.cco.io/v2/token) with scoped access tokens. The OpenAPI documented here is derived from the open-source Go SDK at github.com/ClearChannelOutdoor/io-sdk-golang and from the developer portal at developer.cco.io.
 
-## RADAR Data Suite
+- **Human URL:** [https://developer.cco.io](https://developer.cco.io)
+- **Base URL:** `https://direct.cco.io`
 
-RADAR uses "aggregated and/or anonymous mobile location data in a privacy-conscious manner" to support planning, amplification, and measurement of OOH campaigns. Product family: **RADARView**, **RADARProof**, **RADARConnect**, **RADARSync**, and **Inflight Insights** — described as "the first in-house measurement solution offered by an OOH media owner to deliver visitation analytics during a campaign flight." Delivered as a managed offering rather than a self-serve API.
+#### Tags
 
-## Standards
+- Programmatic Direct
+- DOOH
+- OOH
+- REST
+- OAuth2
 
-- [OpenRTB 2.6 with DOOH extension](https://github.com/InteractiveAdvertisingBureau/openrtb2.x)
-- [OpenDirect-OOH](https://github.com/Outsmart-OOH/ooh_open_direct) (CCO maintains a fork at [`ClearChannelOutdoor/ooh_open_direct`](https://github.com/ClearChannelOutdoor/ooh_open_direct))
-- OpenOOH Venue Taxonomy (`venuetypetax=1`)
+#### Properties
 
-## Scale
+- [Documentation](https://developer.cco.io)
+- [OpenAPI](openapi/clear-channel-outdoor-direct-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [SDK](https://github.com/ClearChannelOutdoor/io-sdk-golang)
+- [Authentication](https://direct.cco.io/v2/token)
+- [Spectral Rules](rules/clear-channel-outdoor-direct-rules.yml) — [Spectral](https://docs.stoplight.io/docs/spectral)
 
-- "130 million Americans reached weekly" (clearchanneloutdoor.com)
-- 65+ U.S. markets
-- 55+ commercial airports
-- ~310,000 displays globally (industry-reported)
-- Listed on NYSE as **CCO**
+### Clear Channel Outdoor pDOOH RTB Supply
 
-## Notable Absences
+Programmatic digital out-of-home (pDOOH) supply made available through 20+ DSP partners that transact CCO inventory via OpenRTB 2.6 with the DOOH object extension (with imp.qty support and the OpenOOH venue taxonomy where venuetypetax=1). This is not a CCO- hosted REST API — it is a supply-chain contract that buyers access through DSPs/SSPs (Vistar Media, Hivestack, The Trade Desk, Google DV360, etc.). Documented here so the contract, partners and schemas are first-class artifacts in the network.
 
-- The `developer.cco.io` portal does not publish a hosted OpenAPI spec — the spec in this repo is derived from the open-source Go SDK and portal documentation.
-- No public pricing for the Automated Direct API — gated by buyer/agency credentials.
-- No public RSS / changelog feed for the developer platform.
-- No public status page surfaced.
+- **Human URL:** [https://clearchanneloutdoor.com/programmatic-advertising/](https://clearchanneloutdoor.com/programmatic-advertising/)
 
-## Maintainer
+#### Tags
 
-[Kin Lane](https://apievangelist.com), API Evangelist — kin@apievangelist.com
+- pDOOH
+- OpenRTB
+- DSP
+- SSP
+- RTB
+
+#### Properties
+
+- [Documentation](https://clearchanneloutdoor.com/programmatic-advertising/)
+- [Standards](https://github.com/InteractiveAdvertisingBureau/openrtb2.x)
+- [JSON Schema](json-schema/clear-channel-outdoor-openrtb-dooh-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Schema](json-schema/clear-channel-outdoor-dsp-integration-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [Examples](examples/clear-channel-outdoor-openrtb-dooh-bid-request-example.json)
+
+### Clear Channel Outdoor RADAR Data Suite
+
+RADAR is CCO's first-party audience-planning, attribution and measurement suite built on aggregated and/or anonymous mobile location data licensed from business partners. The suite includes RADARView (planning), RADARProof (attribution), RADARConnect (audience activation), RADARSync (data sync), and Inflight Insights — described as "the first in-house measurement solution offered by an OOH media owner to deliver visitation analytics during a campaign flight." RADAR is delivered as a managed data/services offering; there is no public self-serve API. Documented here so the product family, scope and data semantics are catalogued in the network.
+
+- **Human URL:** [https://clearchanneloutdoor.com/radar-data-solutions/](https://clearchanneloutdoor.com/radar-data-solutions/)
+
+#### Tags
+
+- Audience Data
+- Attribution
+- Location Data
+- Measurement
+- Planning
+
+#### Properties
+
+- [Documentation](https://clearchanneloutdoor.com/radar-data-solutions/)
+- [Privacy](https://clearchanneloutdoor.com/privacy-policy/)
+
+## Common Properties
+
+- [Website](https://clearchanneloutdoor.com)
+- [Developer Portal](https://developer.cco.io)
+- [Portal](https://developer.cco.io)
+- [Programmatic Advertising](https://clearchanneloutdoor.com/programmatic-advertising/)
+- [Data Solutions](https://clearchanneloutdoor.com/radar-data-solutions/)
+- [Git Hub](https://github.com/ClearChannelOutdoor)
+- [GitHub Organization](https://github.com/ClearChannelOutdoor)
+- [LinkedIn](https://www.linkedin.com/company/clear-channel-outdoor)
+- [Investor Relations](https://investor.clearchannel.com)
+- [Privacy Policy](https://clearchanneloutdoor.com/privacy-policy/)
+- [JSON-LD](json-ld/clear-channel-outdoor-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Vocabulary](vocabulary/clear-channel-outdoor-vocabulary.yml)
+- [Plans](plans/clear-channel-outdoor-plans-pricing.yml)
+- [Rate Limits](rate-limits/clear-channel-outdoor-rate-limits.yml)
+- [Fin Ops](finops/clear-channel-outdoor-finops.yml)
+- [SDK](https://github.com/ClearChannelOutdoor/io-sdk-golang)
+- [Standards](https://github.com/ClearChannelOutdoor/ooh_open_direct)
+- [Products](https://clearchanneloutdoor.com)
+- [Integrations](https://clearchanneloutdoor.com/programmatic-advertising/)
+
+## Maintainers
+
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
+**URL:** https://apievangelist.com
