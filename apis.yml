@@ -5,7 +5,7 @@ type: Index
 access: 3rd-Party
 position: Consumer
 specificationVersion: '0.19'
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 kind: company
 tags:
   - Advertising
@@ -46,7 +46,7 @@ apis:
       developer.cco.io.
     humanURL: https://developer.cco.io
     baseURL: https://direct.cco.io
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
       - Programmatic Direct
       - DOOH
@@ -73,7 +73,7 @@ apis:
       through DSPs/SSPs (Vistar Media, Hivestack, The Trade Desk, Google DV360, etc.). Documented here so the contract,
       partners and schemas are first-class artifacts in the network.
     humanURL: https://clearchanneloutdoor.com/programmatic-advertising/
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
       - pDOOH
       - OpenRTB
@@ -101,7 +101,7 @@ apis:
       analytics during a campaign flight." RADAR is delivered as a managed data/services offering; there is no public
       self-serve API. Documented here so the product family, scope and data semantics are catalogued in the network.
     humanURL: https://clearchanneloutdoor.com/radar-data-solutions/
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
       - Audience Data
       - Attribution
