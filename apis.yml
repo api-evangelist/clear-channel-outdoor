@@ -114,6 +114,10 @@ apis:
       - type: Privacy
         url: https://clearchanneloutdoor.com/privacy-policy/
 common:
+  - type: DomainSecurity
+    url: security/clear-channel-outdoor-domain-security.yml
+  - url: https://clearchanneloutdoor.com/company-news/
+    type: Blog
   - type: Website
     url: https://clearchanneloutdoor.com
   - type: DeveloperPortal
