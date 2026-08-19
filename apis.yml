@@ -16,7 +16,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 position: Consumer
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/clear-channel-outdoor.png
 kind: company
 tags:
