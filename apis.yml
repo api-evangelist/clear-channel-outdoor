@@ -21,6 +21,21 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/clear-chan
 kind: company
 tags:
   - Advertising
+  - Out-of-Home
+  - OOH
+  - Programmatic
+  - Digital Out Of Home
+  - DOOH
+  - pDOOH
+  - OpenRTB
+  - OpenDirect
+  - Billboards
+  - Transit Advertising
+  - Airport Advertising
+  - Audience Measurement
+  - Location Data
+tags_raw:
+  - Advertising
   - Out Of Home
   - OOH
   - Programmatic
@@ -60,6 +75,12 @@ apis:
     baseURL: https://direct.cco.io
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
+      - Programmatic Direct
+      - DOOH
+      - OOH
+      - REST
+      - Authentication
+    tags_raw:
       - Programmatic Direct
       - DOOH
       - OOH
@@ -115,6 +136,12 @@ apis:
     humanURL: https://clearchanneloutdoor.com/radar-data-solutions/
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
+      - Audience Data
+      - Attribution
+      - Location Data
+      - Measurements
+      - Planning
+    tags_raw:
       - Audience Data
       - Attribution
       - Location Data
