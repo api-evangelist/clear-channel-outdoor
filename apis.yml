@@ -27,7 +27,7 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
-position: Consumer
+position: Consuming
 specificationVersion: '0.23'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/clear-channel-outdoor.png
 kind: company
