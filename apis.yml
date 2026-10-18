@@ -34,7 +34,6 @@ kind: company
 tags:
   - Advertising
   - Out-of-Home
-  - OOH
   - Programmatic
   - Digital Out Of Home
   - pDOOH
@@ -88,7 +87,7 @@ apis:
     tags:
       - Programmatic Direct
       - Digital Out Of Home
-      - OOH
+      - Out-of-Home
       - REST
       - Authentication
     tags_raw:
