@@ -1,4 +1,4 @@
-# Clear Channel Outdoor (clear-channel-outdoor)
+# Clear Channel Outdoor
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,126 +66,146 @@
 
 Clear Channel Outdoor (NYSE: CCO) is one of the largest out-of-home (OOH) advertising companies in the world, operating billboards, street furniture, transit, airport, and digital out-of-home (DOOH) displays across 65+ U.S. markets and 55+ commercial airports, reaching "130 million Americans weekly." The CCO developer surface spans three layers: the CCO.IO Automated Direct REST API at direct.cco.io for programmatic-direct buying of inventory (OAuth 2.0 client credentials, open-source Go SDK at github.com/ClearChannelOutdoor/io-sdk-golang), programmatic digital out-of-home (pDOOH) buying through 20+ DSP partners using OpenRTB 2.6 with the DOOH object extension, and RADAR — CCO's first-party audience and attribution data suite (RADARView, RADARProof, RADARConnect, RADARSync, Inflight Insights) built on aggregated and anonymous mobile location data. CCO maintains a public fork of the IAB Tech Lab OpenDirect-OOH specification at github.com/ClearChannelOutdoor/ooh_open_direct.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/clear-channel-outdoor/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/clear-channel-outdoor/refs/heads/main/apis.yml)
+**Areas:** Advertising · Out-of-Home · OOH · Programmatic · Digital Out Of Home · pDOOH · OpenRTB · OpenDirect · Billboards · Transit Advertising · Airport Advertising · Audience Measurement
 
-## Scope
+## Clear Channel Outdoor on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Clear Channel Outdoor is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/clear-channel-outdoor/](https://apis.io/providers/clear-channel-outdoor/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (3)
 
-- Advertising
-- Out Of Home
-- OOH
-- Programmatic
-- Digital Out Of Home
-- DOOH
-- pDOOH
-- OpenRTB
-- OpenDirect
-- Billboards
-- Transit Advertising
-- Airport Advertising
-- Audience Measurement
-- Location Data
+- [Clear Channel Outdoor Automated Direct API](https://apis.io/apis/clear-channel-outdoor/clear-channel-outdoor-direct/) — REST API for the CCO.IO Automated Direct platform at direct.cco.io. Supports search, retrieval and management of displays, networks, markets, products,…
+- [Clear Channel Outdoor pDOOH RTB Supply](https://apis.io/apis/clear-channel-outdoor/pdooh-rtb-supply/) — Programmatic digital out-of-home (pDOOH) supply made available through 20+ DSP partners that transact CCO inventory via OpenRTB 2.6 with the DOOH object…
+- [Clear Channel Outdoor RADAR Data Suite](https://apis.io/apis/clear-channel-outdoor/radar/) — RADAR is CCO's first-party audience-planning, attribution and measurement suite built on aggregated and/or anonymous mobile location data licensed from…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-22
-- **Modified:** 2026-05-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### JSON Schema (4)
 
-### Clear Channel Outdoor Automated Direct API
+The data models the API reads and writes.
 
-REST API for the CCO.IO Automated Direct platform at direct.cco.io. Supports search, retrieval and management of displays, networks, markets, products, orders, bookings, campaigns, creatives, photos, customers, accounts, contracts, quotes, renewals, restrictions and IAB / OpenOOH taxonomies. Uses OAuth 2.0 client credentials (tokenUrl https://direct.cco.io/v2/token) with scoped access tokens. The OpenAPI documented here is derived from the open-source Go SDK at github.com/ClearChannelOutdoor/io-sdk-golang and from the developer portal at developer.cco.io.
+- [DOOH Display](https://apis.io/schemas/clear-channel-outdoor/clear-channel-outdoor-display/)
+- [DSP Integration](https://apis.io/schemas/clear-channel-outdoor/clear-channel-outdoor-dsp-integration/)
+- [OpenRTB DOOH Bid Request (CCO Profile)](https://apis.io/schemas/clear-channel-outdoor/clear-channel-outdoor-openrtb-dooh/)
+- [OOH Order](https://apis.io/schemas/clear-channel-outdoor/clear-channel-outdoor-order/)
 
-- **Human URL:** [https://developer.cco.io](https://developer.cco.io)
-- **Base URL:** `https://direct.cco.io`
+#### JSON Structure (1)
 
-#### Tags
+Data models expressed in JSON Structure.
 
-- Programmatic Direct
-- DOOH
-- OOH
-- REST
-- OAuth2
+- [Clear Channel Outdoor Pdooh Supply Chain Structure](https://apis.io/json-structure/clear-channel-outdoor/clear-channel-outdoor-pdooh-supply-chain-structure/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://developer.cco.io)
-- [OpenAPI](openapi/clear-channel-outdoor-direct-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [SDK](https://github.com/ClearChannelOutdoor/io-sdk-golang)
-- [Authentication](https://direct.cco.io/v2/token)
-- [Spectral Rules](rules/clear-channel-outdoor-direct-rules.yml) — [Spectral](https://docs.stoplight.io/docs/spectral)
+Linked-data contexts for the provider's vocabulary.
 
-### Clear Channel Outdoor pDOOH RTB Supply
+- [Clear Channel Outdoor Context](https://apis.io/jsonld/clear-channel-outdoor/clear-channel-outdoor-context/)
 
-Programmatic digital out-of-home (pDOOH) supply made available through 20+ DSP partners that transact CCO inventory via OpenRTB 2.6 with the DOOH object extension (with imp.qty support and the OpenOOH venue taxonomy where venuetypetax=1). This is not a CCO- hosted REST API — it is a supply-chain contract that buyers access through DSPs/SSPs (Vistar Media, Hivestack, The Trade Desk, Google DV360, etc.). Documented here so the contract, partners and schemas are first-class artifacts in the network.
+#### Vocabulary (1)
 
-- **Human URL:** [https://clearchanneloutdoor.com/programmatic-advertising/](https://clearchanneloutdoor.com/programmatic-advertising/)
+The provider's domain terms, defined.
 
-#### Tags
+- [Clear Channel Outdoor Vocabulary](https://apis.io/vocabularies/clear-channel-outdoor/clear-channel-outdoor-vocabulary/)
 
-- pDOOH
-- OpenRTB
-- DSP
-- SSP
-- RTB
+#### Examples (3)
 
-#### Properties
+Example requests and responses.
 
-- [Documentation](https://clearchanneloutdoor.com/programmatic-advertising/)
-- [Standards](https://github.com/InteractiveAdvertisingBureau/openrtb2.x)
-- [JSON Schema](json-schema/clear-channel-outdoor-openrtb-dooh-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/clear-channel-outdoor-dsp-integration-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [Examples](examples/clear-channel-outdoor-openrtb-dooh-bid-request-example.json)
+- [Clear Channel Outdoor Direct Create Order Example](https://apis.io/examples/clear-channel-outdoor/clear-channel-outdoor-direct-create-order-example/)
+- [Clear Channel Outdoor Direct Search Displays Example](https://apis.io/examples/clear-channel-outdoor/clear-channel-outdoor-direct-search-displays-example/)
+- [Clear Channel Outdoor Openrtb Dooh Bid Request Example](https://apis.io/examples/clear-channel-outdoor/clear-channel-outdoor-openrtb-dooh-bid-request-example/)
 
-### Clear Channel Outdoor RADAR Data Suite
+#### Governance rules (2)
 
-RADAR is CCO's first-party audience-planning, attribution and measurement suite built on aggregated and/or anonymous mobile location data licensed from business partners. The suite includes RADARView (planning), RADARProof (attribution), RADARConnect (audience activation), RADARSync (data sync), and Inflight Insights — described as "the first in-house measurement solution offered by an OOH media owner to deliver visitation analytics during a campaign flight." RADAR is delivered as a managed data/services offering; there is no public self-serve API. Documented here so the product family, scope and data semantics are catalogued in the network.
+Spectral rulesets for the provider's contracts.
 
-- **Human URL:** [https://clearchanneloutdoor.com/radar-data-solutions/](https://clearchanneloutdoor.com/radar-data-solutions/)
+- [Clear Channel Outdoor — direct rules](https://apis.io/rules/clear-channel-outdoor/clear-channel-outdoor-direct-rules/)
+- [Clear Channel Outdoor — jsonschema rules](https://apis.io/rules/clear-channel-outdoor/clear-channel-outdoor-jsonschema-spectral-rules/)
 
-#### Tags
+#### Security (1)
 
-- Audience Data
-- Attribution
-- Location Data
-- Measurement
-- Planning
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Clear Channel Outdoor Domain Security](https://apis.io/security/clear-channel-outdoor/clear-channel-outdoor-domain-security/)
 
-- [Documentation](https://clearchanneloutdoor.com/radar-data-solutions/)
-- [Privacy](https://clearchanneloutdoor.com/privacy-policy/)
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
+
+- [Clear Channel Outdoor Plans Pricing](https://apis.io/plans/clear-channel-outdoor/clear-channel-outdoor-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Clear Channel Outdoor Rate Limits](https://apis.io/rate-limits/clear-channel-outdoor/clear-channel-outdoor-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Clear Channel Outdoor Finops](https://apis.io/finops/clear-channel-outdoor/clear-channel-outdoor-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://clearchanneloutdoor.com)
-- [Developer Portal](https://developer.cco.io)
-- [Portal](https://developer.cco.io)
-- [Programmatic Advertising](https://clearchanneloutdoor.com/programmatic-advertising/)
-- [Data Solutions](https://clearchanneloutdoor.com/radar-data-solutions/)
-- [Git Hub](https://github.com/ClearChannelOutdoor)
-- [GitHub Organization](https://github.com/ClearChannelOutdoor)
-- [LinkedIn](https://www.linkedin.com/company/clear-channel-outdoor)
-- [Investor Relations](https://investor.clearchannel.com)
-- [Privacy Policy](https://clearchanneloutdoor.com/privacy-policy/)
-- [JSON-LD](json-ld/clear-channel-outdoor-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Vocabulary](vocabulary/clear-channel-outdoor-vocabulary.yml)
-- [Plans](plans/clear-channel-outdoor-plans-pricing.yml)
-- [Rate Limits](rate-limits/clear-channel-outdoor-rate-limits.yml)
-- [Fin Ops](finops/clear-channel-outdoor-finops.yml)
-- [SDK](https://github.com/ClearChannelOutdoor/io-sdk-golang)
-- [Standards](https://github.com/ClearChannelOutdoor/ooh_open_direct)
-- [Products](https://clearchanneloutdoor.com)
-- [Integrations](https://clearchanneloutdoor.com/programmatic-advertising/)
+- [Blog](https://clearchanneloutdoor.com/company-news/)
+- [Privacy policy](https://clearchanneloutdoor.com/privacy-policy/)
+- [GitHub](https://github.com/ClearChannelOutdoor)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 35.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 63.2 |
+| Contract governance | 23.5 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 5.3 |
+
+**Agent readiness 17.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/clear-channel-outdoor/](https://apis.io/providers/clear-channel-outdoor/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Clear Channel Outdoor: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/clear-channel-outdoor/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
